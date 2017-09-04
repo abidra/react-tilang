@@ -1,20 +1,29 @@
 import React, { Component } from 'react';
-import { StyleSheet, View, TextInput, Text, TouchableOpacity } from 'react-native';
+import { StyleSheet, ScrollView, TextInput, Text, TouchableOpacity } from 'react-native';
 
 export default class TilangForm extends Component {
+	_handlePress() {
+		var param = this.state.no_tilang;
+		fetch('http://polres.karimunia.com/api/tilang/'+param)  
+		  .then(function(response) {
+			return response.json()
+		  })
+	}
   render() {
     return (
-    <View style={styles.container}>
+    <ScrollView style={styles.container}>
     <TextInput
     placeholder="No Tilang Anda"
     placeholderTextColor="rgba(255,255,255,0.7)"
     style={styles.input}
+    returnKeyLabel = {"next"}
+    onChangeText={(no_tilang) => this.setState({no_tilang})}	
     />
 
-    <TouchableOpacity style={styles.buttonContainer}>
+    <TouchableOpacity style={styles.buttonContainer} onPress={() => this._handlePress()}>
       <Text style={styles.buttonText}>Lihat Info</Text>
     </TouchableOpacity>
-    </View>
+	</ScrollView>
   )
   }
 }

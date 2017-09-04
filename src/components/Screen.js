@@ -11,7 +11,8 @@ export default class Splash extends Component{
       style={styles.logo}
       source={require('../images/logo.png')}
       />
-      <Text style={styles.title}>An app made for Tilang Online. Powered by PT. Karimunia</Text>
+      <Text style={styles.title}>Selamat Datang di E-BARBUK
+Sebuah aplikasi informasi pelayanan Barang Bukti Tilang Sat Lantas Polres Banjarnegara. Powered by Karimunia</Text>
       </View>
       <View style={styles.formContainer}>
       <TilangForm />
