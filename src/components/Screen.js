@@ -9,10 +9,10 @@ export default class Splash extends Component{
       <View style={styles.logoContainer}>
       <Image
       style={styles.logo}
-      source={require('../images/logo.png')}
+      source={require('../images/logo-2.png')}
       />
-      <Text style={styles.title}>Selamat Datang di E-BARBUK
-Sebuah aplikasi informasi pelayanan Barang Bukti Tilang Sat Lantas Polres Banjarnegara. Powered by Karimunia</Text>
+      <Text style={styles.title}>SELAMAT DATANG DI E-BARBUK{"\n"}{"\n"}
+Sebuah aplikasi informasi pelayanan{"\n"}Barang Bukti Tilang{"\n"}Satuan Lalu Lintas Polres Banjarnegara. {"\n"}{"\n"}Powered by Karimunia</Text>
       </View>
       <View style={styles.formContainer}>
       <TilangForm />
@@ -34,13 +34,13 @@ const styles = StyleSheet.create({
     justifyContent: 'center'
   },
   logo: {
-    width: 133,
+    width: 283,
     height: 188
   },
   title:{
     color: '#FFF',
     marginTop: 10,
-    width: 200,
+    width: 300,
     textAlign: 'center',
     opacity: 0.9
   },
